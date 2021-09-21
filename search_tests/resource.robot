@@ -29,3 +29,8 @@ Search Result Should Be Found
     Location Should Be      ${URL}search?keyword=Belajar
     Wait Until Element Is Visible   xpath://div[@data-testid="course-card"]
     Element Should Be Visible   xpath://div[@data-testid="course-card"]
+
+Search Result Should Not Be Found
+    Location Should Be      ${URL}search?keyword=Jojo
+    Wait Until Element Is Visible   xpath://div[@data-testid="empty-result-card"]
+    Element Should Be Visible   xpath://div[@data-testid="empty-result-card"]
