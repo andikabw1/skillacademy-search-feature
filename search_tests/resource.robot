@@ -34,3 +34,6 @@ Search Result Should Not Be Found
     Location Should Be      ${URL}search?keyword=Jojo
     Wait Until Element Is Visible   xpath://div[@data-testid="empty-result-card"]
     Element Should Be Visible   xpath://div[@data-testid="empty-result-card"]
+
+Search Can't Be Done
+    Location Should Be      ${URL}
