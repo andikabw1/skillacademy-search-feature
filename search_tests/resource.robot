@@ -26,7 +26,8 @@ Submit Keyword
     Click Element    xpath://div[@data-testid="search-icon"]
 
 Search Result Should Be Found
-    Location Should Be      ${URL}search?keyword=Belajar
+    [Arguments]             ${keyword}
+    Location Should Be      ${URL}search?keyword=${keyword}
     Wait Until Element Is Visible   xpath://div[@data-testid="course-card"]
     Element Should Be Visible   xpath://div[@data-testid="course-card"]
 
